@@ -1,7 +1,8 @@
 import React from 'react';
 import ProductsList from './ProductList';
-import Slider from 'react-slick';
+// import Slider from 'react-slick';
 import SliderMain from './SliderMain';
+import Three from './Three';
 
 function Main({ products }) {
   return (
@@ -35,11 +36,17 @@ function Main({ products }) {
     //   ))}
     // </div>
     <>
-    
+      
       <div className='container m-auto lg:max-w-[1024px]'>
-      <SliderMain/>
-      <ProductsList data={products} />
-    </div>
+      <div className='max-w-[745px] lg:ml-56'>
+        <SliderMain/>
+        <div className='mt-3'>
+          <Three/>
+        </div>
+        
+      </div>
+        <ProductsList data={products} />
+      </div>
     </>
   );
 }
